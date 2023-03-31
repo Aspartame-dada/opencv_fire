@@ -1,6 +1,4 @@
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
-# Author: qjk
+
 
 import cv2
 import numpy as np
@@ -55,15 +53,6 @@ while True:
         r_bottom = (x + w, y + h)
         cv2.rectangle(ResImg, l_top, r_bottom, (255, 0, 0), 2)
     cv2.imshow("RESULT", ResImg)
-    # blur = cv2.GaussianBlur(frame, (21, 21), 0)
-    # hsv = cv2.cvtColor(blur, cv2.COLOR_BGR2HSV)
-    #
-    # lower = [30, 50, 50]
-    # upper = [60, 255, 255]
-    # lower = np.array(lower, dtype="uint8")
-    # upper = np.array(upper, dtype="uint8")
-    # mask = cv2.inRange(hsv, lower, upper)
-
 
     # output = cv2.bitwise_and(frame, hsv, mask=mask)
     if cv2.waitKey(1) & 0xFF == ord('q'):
